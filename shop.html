@@ -1,0 +1,588 @@
+﻿<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>المنتجات | دار الأخشاب</title>
+    <meta name="description" content="تصفح جميع منتجات دار الأخشاب - ألواح كونتر، جبس بورد، أثاث جاهز، معدات وأدوات بأفضل الأسعار">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+<!-- Mobile Overlay -->
+<div class="mobile-overlay"></div>
+
+<!-- Navbar -->
+<nav class="navbar">
+    <div class="nav-container">
+        <a href="index.html" class="nav-logo">
+            <div class="logo-icon">DK</div>
+            <span>دار الأخشاب</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">الرئيسية</a></li>
+            <li><a href="shop.html" class="active">المنتجات</a></li>
+            <li><a href="about.html">من نحن</a></li>
+            <li><a href="contact.html">تواصل معنا</a></li>
+        </ul>
+        <div class="nav-phone">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+            <span>01080722856 - 01288948927</span>
+        </div>
+        <div class="mobile-toggle">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </div>
+</nav>
+
+<!-- Shop Hero -->
+<section class="shop-hero">
+    <h1>جميع المنتجات</h1>
+    <p>اكتشف تشكيلتنا الكاملة من الأخشاب والأثاث ومستلزمات الموبليا</p>
+</section>
+
+<!-- Shop Layout -->
+<div class="shop-layout">
+
+    <!-- Sidebar Filters -->
+    <aside class="shop-sidebar">
+        <button class="sidebar-toggle" onclick="document.querySelector('.filter-content').classList.toggle('open')">
+            <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M10 18h4v-2h-4v2zM3 6v2h18V6H3zm3 7h12v-2H6v2z"/></svg>
+            إظهار/إخفاء الفلاتر
+        </button>
+        <div class="filter-content">
+
+            <!-- Classification Filter -->
+            <div class="filter-group">
+                <h4>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/><line x1="3" y1="9" x2="21" y2="9"/><line x1="3" y1="15" x2="21" y2="15"/></svg>
+                    التصنيف
+                </h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="cat-timber" value="timber" onchange="filterProducts()">
+                    <label for="cat-timber">أخشاب وألواح</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cat-furniture" value="furniture" onchange="filterProducts()">
+                    <label for="cat-furniture">مكونات الموبليا</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cat-furniture-ready" value="furniture-ready" onchange="filterProducts()">
+                    <label for="cat-furniture-ready">أثاث جاهز</label>
+                    <span class="count">3</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="cat-hardware" value="hardware" onchange="filterProducts()">
+                    <label for="cat-hardware">معدات وأدوات</label>
+                    <span class="count">1</span>
+                </div>
+            </div>
+
+            <!-- Material Filter -->
+            <div class="filter-group">
+                <h4>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M3 13h8V3H3v10zm0 8h8v-6H3v6zm10 0h8V11h-8v10zm0-18v6h8V3h-8z"/></svg>
+                    المادة
+                </h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="mat-wood" value="wood" onchange="filterProducts()">
+                    <label for="mat-wood">خشب طبيعي</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="mat-mdf" value="mdf" onchange="filterProducts()">
+                    <label for="mat-mdf">MDF</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="mat-plywood" value="plywood" onchange="filterProducts()">
+                    <label for="mat-plywood">كونتر</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="mat-gypsum" value="gypsum" onchange="filterProducts()">
+                    <label for="mat-gypsum">جبس</label>
+                    <span class="count">1</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="mat-aluminum" value="aluminum" onchange="filterProducts()">
+                    <label for="mat-aluminum">ألمنيوم</label>
+                    <span class="count">1</span>
+                </div>
+            </div>
+
+            <!-- Thickness Filter -->
+            <div class="filter-group">
+                <h4>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/><line x1="2" y1="12" x2="22" y2="12"/></svg>
+                    السماكة
+                </h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="thk-12" value="12mm" onchange="filterProducts()">
+                    <label for="thk-12">12 مم</label>
+                    <span class="count">1</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="thk-18" value="18mm" onchange="filterProducts()">
+                    <label for="thk-18">18 مم</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="thk-25" value="25mm" onchange="filterProducts()">
+                    <label for="thk-25">25 مم</label>
+                    <span class="count">1</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="thk-35" value="35mm" onchange="filterProducts()">
+                    <label for="thk-35">35 مم</label>
+                    <span class="count">1</span>
+                </div>
+            </div>
+
+            <!-- Brand Filter -->
+            <div class="filter-group">
+                <h4>
+                    <svg width="16" height="16" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/></svg>
+                    البراند
+                </h4>
+                <div class="filter-option">
+                    <input type="checkbox" id="brand-egy" value="egyptian" onchange="filterProducts()">
+                    <label for="brand-egy">مصري</label>
+                    <span class="count">3</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="brand-turk" value="turkish" onchange="filterProducts()">
+                    <label for="brand-turk">تركي</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="brand-chinese" value="chinese" onchange="filterProducts()">
+                    <label for="brand-chinese">صيني</label>
+                    <span class="count">2</span>
+                </div>
+                <div class="filter-option">
+                    <input type="checkbox" id="brand-euro" value="european" onchange="filterProducts()">
+                    <label for="brand-euro">أوروبي</label>
+                    <span class="count">1</span>
+                </div>
+            </div>
+        </div>
+    </aside>
+    <!-- Shop Content -->
+    <main class="shop-content">
+        <div class="shop-toolbar">
+            <div class="result-count">عرض <strong>8</strong> منتج</div>
+            <select class="sort-select" onchange="sortProducts(this.value)">
+                <option value="default">ترتيب حسب: الافتراضي</option>
+                <option value="price-low">السعر: من الأقل للأعلى</option>
+                <option value="price-high">السعر: من الأعلى للأقل</option>
+                <option value="name">الاسم</option>
+            </select>
+        </div>
+
+        <div class="products-grid" id="products-grid">
+
+            <div class="product-card animate-on-scroll" data-category="timber" data-material="plywood" data-thickness="18mm" data-brand="egyptian" data-price="450" data-name="لوحة كونتر بريميوم">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1558618666-fcd25c85f82e?w=500&q=80" alt="لوحة كونتر بريميوم" loading="lazy">
+                    
+                    <div class="product-badge">مميز</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أخشاب وألواح</div>
+                    <h3>لوحة كونتر بريميوم - عيار 18 مم</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            244 × 122 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            18 مم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            450 ج.م
+                            <small>/ لوح</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('لوحة كونتر بريميوم')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="timber" data-material="gypsum" data-thickness="12mm" data-brand="egyptian" data-price="85" data-name="لوحة جبس بورد">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1513694203232-719a280e022f?w=500&q=80" alt="لوحة جبس بورد" loading="lazy">
+                    
+                    <div class="product-badge">الأكثر مبيعاً</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أخشاب وألواح</div>
+                    <h3>لوحة جبس بورد - عيار 12 مم</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            240 × 120 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            12 مم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            85 ج.م
+                            <small>/ لوح</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('لوحة جبس بورد')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="furniture" data-material="mdf" data-thickness="35mm" data-brand="turkish" data-price="320" data-name="أوشا باب MDF">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1555041469-a586c61ea9bc?w=500&q=80" alt="أوشا باب MDF" loading="lazy">
+                    
+                    <div class="product-badge">جديد</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">مكونات الموبليا</div>
+                    <h3>أوشا باب MDF - درجة أولى</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            210 × 80 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            35 مم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            320 ج.م
+                            <small>/ قطعة</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('أوشا باب MDF')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="furniture-ready" data-material="wood" data-thickness="" data-brand="egyptian" data-price="890" data-name="كرسي سفرة كلاسيك">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500&q=80" alt="كرسي سفرة كلاسيك" loading="lazy">
+                    
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أثاث جاهز</div>
+                    <h3>كرسي سفرة كلاسيك - خشب زان</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            45 × 50 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            ارتفاع 95 سم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            890 ج.م
+                            <small>/ كرسي</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('كرسي سفرة كلاسيك')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="furniture-ready" data-material="mdf" data-thickness="25mm" data-brand="turkish" data-price="1,450" data-name="ترابيزة طعام عصرية">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1617806118233-18e1de247200?w=500&q=80" alt="ترابيزة طعام عصرية" loading="lazy">
+                    
+                    <div class="product-badge">مميز</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أثاث جاهز</div>
+                    <h3>ترابيزة طعام عصرية - 6 أشخاص</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            180 × 90 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            ارتفاع 75 سم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            1,450 ج.م
+                            <small>/ ترابيزة</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('ترابيزة طعام عصرية')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="hardware" data-material="aluminum" data-thickness="" data-brand="chinese" data-price="1,200" data-name="سلم ألمنيوم متعدد المراحل">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1504307651254-35680f356dfd?w=500&q=80" alt="سلم ألمنيوم متعدد المراحل" loading="lazy">
+                    
+                    <div class="product-badge">الأكثر مبيعاً</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">معدات وأدوات</div>
+                    <h3>سلم ألمنيوم 7 مراحل - متعدد الاستخدامات</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            ارتفاع 3.5 م
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            مقاوم للصدأ
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            1,200 ج.م
+                            <small>/ سلم</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('سلم ألمنيوم متعدد المراحل')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="furniture-ready" data-material="mdf" data-thickness="18mm" data-brand="chinese" data-price="275" data-name="شماعة ملابس أرضية">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1558997519-8e16ca1e2985?w=500&q=80" alt="شماعة ملابس أرضية" loading="lazy">
+                    
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أثاث جاهز</div>
+                    <h3>شماعة ملابس أرضية - تصميم عصري</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            ارتفاع 170 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            قابل للطي
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            275 ج.م
+                            <small>/ شماعة</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('شماعة ملابس أرضية')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="product-card animate-on-scroll" data-category="furniture-ready" data-material="wood" data-thickness="" data-brand="european" data-price="650" data-name="كرسي بار خشبي">
+                <div class="product-image">
+                    <img src="https://images.unsplash.com/photo-1503602642458-232111445657?w=500&q=80" alt="كرسي بار خشبي" loading="lazy">
+                    
+                    <div class="product-badge">جديد</div>
+                    <div class="product-wishlist">
+                        <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M20.84 4.61a5.5 5.5 0 00-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 00-7.78 7.78l1.06 1.06L12 21.23l7.78-7.78 1.06-1.06a5.5 5.5 0 000-7.78z"/></svg>
+                    </div>
+                </div>
+                <div class="product-info">
+                    <div class="product-category">أثاث جاهز</div>
+                    <h3>كرسي بار خشبي - تصميم أوروبي</h3>
+                    <div class="product-specs">
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><rect x="3" y="3" width="18" height="18" rx="2"/></svg>
+                            40 × 40 سم
+                        </span>
+                        
+                        <span class="product-spec">
+                            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><line x1="12" y1="2" x2="12" y2="22"/></svg>
+                            ارتفاع 110 سم
+                        </span>
+                        
+                    </div>
+                    <div class="product-footer">
+                        <div class="product-price">
+                            650 ج.م
+                            <small>/ كرسي</small>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-icon" onclick="sendWhatsApp('كرسي بار خشبي')" title="تواصل واتساب">
+                                <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+                            </button>
+                            <a href="product.html" class="btn-icon" title="عرض التفاصيل">
+                                <svg width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/><circle cx="12" cy="12" r="3"/></svg>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+
+</div>
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-grid">
+        <div class="footer-brand">
+            <h3>
+                <div class="logo-icon" style="width:36px;height:36px;background:linear-gradient(135deg,var(--gold-accent),var(--gold-hover));border-radius:8px;display:flex;align-items:center;justify-content:center;font-size:1rem;color:var(--wood-brown);font-weight:900;">DK</div>
+                دار الأخشاب
+            </h3>
+            <p>معرض دار الأخشاب هو وجهتك الأولى لشراء أجود أنواع الأخشاب والأثاث ومستلزمات الموبليا. خبرة تمتد لأكثر من 15 عاماً في مجال الأثاث والديكور.</p>
+            <div class="footer-social">
+                <a href="https://www.facebook.com/share/18kz8QVVQr/" target="_blank" aria-label="Facebook">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M24 12.073c0-6.627-5.373-12-12-12s-12 5.373-12 12c0 5.99 4.388 10.954 10.125 11.854v-8.385H7.078v-3.47h3.047V9.43c0-3.007 1.792-4.669 4.533-4.669 1.312 0 2.686.235 2.686.235v2.953H15.83c-1.491 0-1.956.925-1.956 1.874v2.25h3.328l-.532 3.47h-2.796v8.385C19.612 23.027 24 18.062 24 12.073z"/></svg>
+                </a>
+                <a href="#" aria-label="Instagram">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+                </a>
+                <a href="#" aria-label="YouTube">
+                    <svg width="18" height="18" fill="currentColor" viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 00-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 00.502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 002.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 002.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+                </a>
+            </div>
+        </div>
+        <div class="footer-col">
+            <h4>روابط سريعة</h4>
+            <ul>
+                <li><a href="index.html">الرئيسية</a></li>
+                <li><a href="shop.html">المنتجات</a></li>
+                <li><a href="about.html">من نحن</a></li>
+                <li><a href="contact.html">تواصل معنا</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>التصنيفات</h4>
+            <ul>
+                <li><a href="shop.html">أخشاب وألواح</a></li>
+                <li><a href="shop.html">مكونات الموبليا</a></li>
+                <li><a href="shop.html">أثاث جاهز</a></li>
+                <li><a href="shop.html">معدات وأدوات</a></li>
+            </ul>
+        </div>
+        <div class="footer-col">
+            <h4>تواصل معنا</h4>
+            <div class="footer-contact-item">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/></svg>
+                <span>اتميدة، ميت غمر، الدقهلية</span>
+            </div>
+            <div class="footer-contact-item">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/></svg>
+                <a href="tel:+201080722856">01080722856</a> / <a href="tel:+201288948927">01288948927</a>
+            </div>
+            <div class="footer-contact-item">
+                <svg fill="currentColor" viewBox="0 0 24 24"><path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/></svg>
+                <span>يومياً من 9 صباحاً - 10 مساءً</span>
+            </div>
+        </div>
+    </div>
+    <div class="footer-bottom">
+        <p>&copy; 2026 دار الأخشاب. جميع الحقوق محفوظة.</p>
+    </div>
+</footer>
+
+<!-- Floating WhatsApp -->
+<a href="https://wa.me/201080722856" class="whatsapp-float" target="_blank" aria-label="تواصل عبر واتساب">
+    <svg viewBox="0 0 24 24"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+    <span class="whatsapp-tooltip">تواصل معنا عبر واتساب</span>
+</a>
+
+<!-- Back to Top -->
+<button class="back-to-top" aria-label="العودة للأعلى">
+    <svg width="20" height="20" fill="currentColor" viewBox="0 0 24 24"><path d="M7.41 15.41L12 10.83l4.59 4.58L18 14l-6-6-6 6z"/></svg>
+</button>
+
+<script src="js/app.js"></script>
+</body>
+</html>
